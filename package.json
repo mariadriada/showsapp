@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mariagiraldo/showsapp/issues"
   },
-  "homepage": "https://github.com/mariagiraldo/showsapp#readme"
+  "homepage": "https://github.com/mariagiraldo/showsapp#readme",
+  "dependencies": {
+    "webpack": "^3.6.0"
+  }
 }
