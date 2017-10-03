@@ -23,19 +23,54 @@ const config: webpack.Configuration = {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
 
-  //Dev server
+
+
   module: {
-      rules: [{
-          test: /\.scss$/,
-          use: [{
-              loader: "style-loader" // creates style nodes from JS strings
-          }, {
-              loader: "css-loader" // translates CSS into CommonJS
-          }, {
-              loader: "sass-loader" // compiles Sass to CSS
-          }]
-      }]
-  }
+    rules: [
+      {
+        test: /\.scss?$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.ts$/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+      },
+      {
+        test: /\.ts?$/,
+        loader: 'awesome-typescript-loader'
+      },
+     
+    ]
+  },
+
+  //Dev server
+  // module: {
+  //     rules: [{
+  //         test: /\.scss$/,
+  //         use: [{
+  //             loader: "style-loader" // creates style nodes from JS strings
+  //         }, {
+  //             loader: "css-loader" // translates CSS into CommonJS
+  //         }, {
+  //             loader: "sass-loader" // compiles Sass to CSS
+  //         }]
+  //     }]
+  // }
 
 };
 
