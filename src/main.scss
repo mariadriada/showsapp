@@ -1,5 +1,33 @@
-$color : red;
+$bgcolor : #A87A7A;
+$fontcolor1: #FCFCFC;
+$bgcolorheader:  rgba(199, 23, 23, 0.39);
 
 body {
-  background-color: $color;
+  background-color: $bgcolor;
+  font: $fontcolor1;
+
+  header {
+    height: 100px;
+    background-color: $bgcolorheader;
+    font-size: 50px; 
+    text-align: center;
+    vertical-align: center;   
+  }
+
+  .dinamic_content{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #2D87EE;
+    min-height: 500px;
+    display: block;
+  }
+
+  footer {
+    height: 200px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+  }
+
 }
+
+
