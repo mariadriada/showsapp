@@ -8,6 +8,6 @@ This project use node.js whit webpack configuration tools
 In the command console, on project directory
 
 - For install: npm install
-- For run dev: npm run serer:init
+- For run dev: npm run server:init
 - For run script build:  npm  run webserver
 
