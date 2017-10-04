@@ -3,7 +3,8 @@ import * as path from 'path';
 
 const config: webpack.Configuration = {
 
-  entry: './src/index.ts',
+  
+  entry:   './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.js',
@@ -55,7 +56,7 @@ const config: webpack.Configuration = {
         loader: 'awesome-typescript-loader'
       },
      
-    ]
+    ],
   },
 
   //Dev server
